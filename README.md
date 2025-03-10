@@ -1,55 +1,33 @@
 # CreditCardDetection
 
-Credit Card Fraud Detection
-
 Overview
 
 This project focuses on credit card fraud detection using machine learning techniques. The dataset comes from the Kaggle Credit Card Fraud Detection dataset. The dataset contains anonymized credit card transactions labeled as fraudulent (1) or non-fraudulent (0). Due to extreme class imbalance, specialized techniques such as SMOTE, undersampling, and balanced models were used.
 
 Features
+**
+Data Preprocessing:**
 
-Data Preprocessing:
+  Normalization and scaling using RobustScaler
 
-Normalization and scaling using RobustScaler
+  Handling class imbalance with SMOTE and random undersampling
 
-Handling class imbalance with SMOTE and random undersampling
+**Machine Learning Models:
+**
+  Logistic Regression
 
-Machine Learning Models:
+  Random Forest
 
-Logistic Regression
+  Gradient Boosting (XGBoost, GBC)
 
-Random Forest
+  Support Vector Machine (SVM)
 
-Gradient Boosting (XGBoost, GBC)
+  Neural Network (TensorFlow/Keras)
 
-Support Vector Machine (SVM)
+**Model Evaluation:**
 
-Neural Network (TensorFlow/Keras)
+  Precision, Recall, F1-score, and ROC-AUC
 
-Model Evaluation:
+  Handling false positives vs. false negatives
 
-Precision, Recall, F1-score, and ROC-AUC
-
-Handling false positives vs. false negatives
-
-Performance comparison across multiple models
-
-Dataset
-
-Source: Kaggle Credit Card Fraud Dataset
-
-Description: Contains 284,807 transactions, with only 492 fraudulent transactions (~0.172%)
-
-Key Features:
-
-Time: Time elapsed since first transaction
-
-Amount: Transaction amount (scaled)
-
-V1 to V28: Anonymized principal components from PCA
-
-Class: Target variable (0 = Not Fraud, 1 = Fraud)
-
-Installation & Setup
-
-Clone this repository:
+  Performance comparison across multiple models
