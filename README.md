@@ -1,33 +1,37 @@
-# CreditCardDetection
+Installation & Setup
 
-Overview
+Clone this repository:
 
-This project focuses on credit card fraud detection using machine learning techniques. The dataset comes from the Kaggle Credit Card Fraud Detection dataset. The dataset contains anonymized credit card transactions labeled as fraudulent (1) or non-fraudulent (0). Due to extreme class imbalance, specialized techniques such as SMOTE, undersampling, and balanced models were used.
+git clone https://github.com/yourusername/credit-card-fraud-detection.git
+cd credit-card-fraud-detection
 
-Features
-**
-Data Preprocessing:**
+Create a virtual environment and install dependencies:
 
-  Normalization and scaling using RobustScaler
+python -m venv venv
+source venv/bin/activate  # Mac/Linux
+venv\Scripts\activate  # Windows
+pip install -r requirements.txt
 
-  Handling class imbalance with SMOTE and random undersampling
+Download the dataset from Kaggle using the API:
 
-**Machine Learning Models:
-**
-  Logistic Regression
+mkdir ~/.kaggle
+cp kaggle.json ~/.kaggle/
+chmod 600 ~/.kaggle/kaggle.json
+kaggle datasets download -d mlg-ulb/creditcardfraud
+unzip creditcardfraud.zip
 
-  Random Forest
+Usage
 
-  Gradient Boosting (XGBoost, GBC)
+1. Data Preprocessing
 
-  Support Vector Machine (SVM)
+python src/data_processing.py
 
-  Neural Network (TensorFlow/Keras)
+2. Train Models
 
-**Model Evaluation:**
+python src/model_training.py
 
-  Precision, Recall, F1-score, and ROC-AUC
+3. Evaluate Models
 
-  Handling false positives vs. false negatives
+python src/evaluation.py
 
-  Performance comparison across multiple models
+4. Run Inference on New Data
